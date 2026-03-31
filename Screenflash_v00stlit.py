@@ -5,8 +5,9 @@ import pandas as pd
 import time
 
 #start--------------------------------------------------------
-st.subheader("Screenflash (local version)", divider="grey")
-Sel_00 = [' ' for i in range(10)]
+#st.subheader("Screenflash (local version)", divider="grey")
+st.set_page_config(layout='wide')
+Sel_00 = [' ' for i in range(25)]
 tones = {0:'white', 1:'black', 2:'blue', 3:'red', 4:'yellow', 5:'green', 6:'orange',
          7:'lime', 8:'magenta'}
 
@@ -35,12 +36,12 @@ if flash:
             with vaciar.container():
                 Sel_00df = pd.DataFrame(Sel_00)
                 Sel_01df = Sel_00df.style.set_properties(**{'background-color': ton0})
-                st.dataframe(Sel_01df, width="stretch", hide_index=True)
+                st.dataframe(Sel_01df, width="stretch", hide_index=True, height=800)
         else:
             with vaciar.container():
                 Sel_00df = pd.DataFrame(Sel_00)
                 Sel_01df = Sel_00df.style.set_properties(**{'background-color': ton1})
-                st.dataframe(Sel_01df, width="stretch", hide_index=True)
+                st.dataframe(Sel_01df, width="stretch", hide_index=True, height=800)
         time.sleep(0.1)
         c += 1
         vaciar.empty()
