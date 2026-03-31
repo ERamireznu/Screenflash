@@ -13,21 +13,21 @@ tones = {0:'white', 1:'black', 2:'blue', 3:'red', 4:'yellow', 5:'green', 6:'oran
 
 flash, ton0, ton1 = False, tones[0], tones[0]  #only intializing
 col01, col02, col03, col04, col05 = st.columns(5)
-with col01:
-    if st.button("Mixed", type="primary", key="seleccion"):   
-        flash, ton0, ton1 = True, tones[7], tones[8]
-with col02:
-    if st.button("Blue"):
-        flash, ton0, ton1 = True, tones[2], tones[0]
-with col03:
-    if st.button("Red"):
-        flash, ton0, ton1 = True, tones[3], tones[0]
-with col04:
-    if st.button("Yellow"):
-        flash, ton0, ton1 = True, tones[4], tones[0]
-with col05:
-    if st.button("Green"):
-        flash, ton0, ton1 = True, tones[5], tones[0]        
+#with col01:
+if st.button("Mixed", type="primary", key="seleccion"):   
+    flash, ton0, ton1 = True, tones[7], tones[8]
+#with col02: 
+#    if st.button("Blue"):
+#        flash, ton0, ton1 = True, tones[2], tones[0]
+#with col03:
+#    if st.button("Red"):
+#        flash, ton0, ton1 = True, tones[3], tones[0]
+#with col04:
+#    if st.button("Yellow"):
+#        flash, ton0, ton1 = True, tones[4], tones[0]
+#with col05:
+#    if st.button("Green"):
+#        flash, ton0, ton1 = True, tones[5], tones[0]        
 if flash:
     c = 0    
     while c < 10:
